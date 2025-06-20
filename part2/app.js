@@ -36,7 +36,7 @@ function requireRole(role) {
         } else {
             res.redirect('/');
         }
-}
+    };
 }
 
 // Now user needs to login in order to access these pages
