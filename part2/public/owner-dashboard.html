@@ -130,7 +130,9 @@
           fetch('/api/users/mydogs')
           .then(res => res.json())
           .then(data => dogs.value = data)
-          .catch(err -
+          .catch(err => {
+            error.value = 'F'
+          }
         });
 
         return {
