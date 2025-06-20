@@ -19,7 +19,8 @@ app.use(session({
 
 }));
 
-//middle ware for user au
+//middle ware for user authentication
+function requireLogin(req, res, next)
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
