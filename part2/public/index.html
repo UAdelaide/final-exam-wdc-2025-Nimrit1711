@@ -90,7 +90,9 @@
               })
             );
             dogs.value = dogPhoto;
-          } catch (error)
+          } catch (error) {
+            console.error('Error loading dog list', error);
+          }
         }
       }
       methods: {
