@@ -39,3 +39,9 @@ body {
   color: darkmagenta;
   text-shadow: 1px 1px 3px yellow;
 }
+
+button {
+  position: absolute;
+  bottom: 5%;
+  
+}
