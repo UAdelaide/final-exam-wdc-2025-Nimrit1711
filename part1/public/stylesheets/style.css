@@ -52,7 +52,10 @@ body {
   right: 10px;
   background-color: rgba(255,255,255,0.2);
   border: 1px solid #ccc;
-  col
+  color: lime;
+  font-size: 12px;
+  font-weight: bold;
+  padding: ;
 }
 
 button {
