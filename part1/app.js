@@ -140,6 +140,8 @@ let db;
             `);
     }
 
+    const [reqRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
+     if (reqRows[0].count ===0){
          await db.execute(`
             INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
             VALUES
