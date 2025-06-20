@@ -159,7 +159,7 @@ let db;
 })();
 
         // Route to /api/dogs
-        app.get('/api/dogs', async (req, res) => {
+    app.get('/api/dogs', async (req, res) => {
         try {
             const [dogs] = await db.execute('SELECT * FROM Dogs');
             res.json(dogs);
