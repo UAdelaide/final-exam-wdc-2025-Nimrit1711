@@ -94,7 +94,7 @@
             console.error(error);
           }
         },
-        
+
         async function loadRegisteredDogs() {
           try {
             const res = await fetch('/api/dogs');
@@ -113,7 +113,7 @@
                 }
               })
             );
-            dogs.value = dogPhoto;
+            this.dogs = dogPhoto;
           } catch (error) {
             console.error('Error loading dog list', error);
           }
