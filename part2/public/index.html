@@ -78,7 +78,11 @@
             const data = await res.json();
 
             // adding a photo
-            const dogPhoto
+            const dogPhoto = await Promise.all(
+              data.map(async dog => {
+                
+              })
+            )
           }
         }
       }
