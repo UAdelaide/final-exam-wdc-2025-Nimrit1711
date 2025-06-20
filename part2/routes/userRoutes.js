@@ -44,6 +44,7 @@ router.get('/me', async (req, res) => {
     }
 
     const user = rows[0];
+    // Send only necessary information back to the frontend
     res.json({
       id: user.user_id,
       username: user.username,
