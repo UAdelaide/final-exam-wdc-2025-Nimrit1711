@@ -35,10 +35,8 @@ body {
 
 
 .image-div img {
-  width: 350px;
+  position: relative;
   border: 5px dashed red;
-  background-color: white;
-
 }
 
 .title {
