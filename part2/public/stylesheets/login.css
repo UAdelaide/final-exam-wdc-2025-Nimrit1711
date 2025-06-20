@@ -36,3 +36,12 @@ input:focus {
     border-radius: 6px;
 
 }
+
+
+table tbody tr:nth-child(even) {
+    background-color: #aaaaaa;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: white;
+}
