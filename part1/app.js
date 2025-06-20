@@ -139,6 +139,8 @@ app.use('/users', usersRouter);
         `);
              console.log('Database created and filled');
              await db.end();
+         } catch (err) {
+            console.error('error loading database')
          }
 
     });
