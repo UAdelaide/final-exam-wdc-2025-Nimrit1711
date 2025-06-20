@@ -127,7 +127,9 @@ router.get('/dogs', aysnc (req, res) => {
   try {
     const [rows] = await db.execute('SELECT * FROM Dogs');
     res.json(rows);
-  } catch (error)
+  } catch (error) {
+    console.error('Error')
+  }
 })
 
 
