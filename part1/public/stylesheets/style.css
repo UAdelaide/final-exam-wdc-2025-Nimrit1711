@@ -24,5 +24,8 @@ body {
 
 .image-div img {
   width: 350px;
+  height: auto;
+  border: 5px dashed red;
   
+
 }
