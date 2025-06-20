@@ -26,6 +26,10 @@ body {
   width: 350px;
   height: auto;
   border: 5px dashed red;
-  
 
+}
+
+.title {
+  font-size: 30px;
+  color: ;
 }
