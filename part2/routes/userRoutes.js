@@ -83,8 +83,10 @@ router.get('/logout', (req, res) => {
 
 router.get('/mydogs', async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner'){
-    return res.status(401).json({ error: })
+    return res.status(401).json({ error: 'Not authorised'});
   }
+
+  const userId = req.session.user.id
 })
 
 
