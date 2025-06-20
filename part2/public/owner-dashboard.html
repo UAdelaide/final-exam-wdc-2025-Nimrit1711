@@ -128,7 +128,8 @@
         onMounted(() => {
           loadWalks();
           fetch('/api/users/mydogs')
-          .then
+          .then(res => res.json())
+          .then(data =>)
         });
 
         return {
