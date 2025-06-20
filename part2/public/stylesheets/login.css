@@ -19,12 +19,12 @@
     background-color: rgb(13, 110, 253);
     color: white;
     border: none;
-    border: 5px;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .login-form button:hover {
-    background-color: rgb(13, 110, 253);
+    background-color: rgb(12, 103, 240);
 }
