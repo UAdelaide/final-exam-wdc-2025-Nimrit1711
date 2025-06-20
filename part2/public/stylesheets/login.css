@@ -22,4 +22,7 @@
     border: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.login-form
