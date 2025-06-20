@@ -14,8 +14,7 @@
 }
 
 .login-form button {
-    width: 20%;
-    padding: 12px;
+    padding: 8px;
     background-color: rgb(13, 110, 253);
     color: white;
     border: none;
