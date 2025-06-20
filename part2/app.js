@@ -29,8 +29,9 @@ function requireLogin(req, res, next) {
 }
 
 app.get('/owner-dashboard.html', requireLogin, (req, res) => {
-    res.sendFile()
+    res.sendFile('owner-dashboard.html');
 })
+
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
