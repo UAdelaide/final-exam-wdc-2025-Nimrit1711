@@ -41,7 +41,8 @@ router.post('/login', async (req, res) => {
 
   try {
     const [rows] = await db.execute(`SELECT * FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);
-      if (rows.length === 1) {
+
+    if (rows.length === 1) {
         req.session.user - {
           id: rows[0].username,
           role: rows[0].role
@@ -55,7 +56,7 @@ router.post('/login', async (req, res) => {
         }
       } else {
         res.send('<p>Login Failed <a href="/">Try again</a></p>');
-      }
+    }
     } catch (error) {
       console.error(error);
       res.status(500).send('Login Server error');
