@@ -29,5 +29,6 @@
 }
 
 input:focus {
-
+    outline: none;
+    border: ;
 }
