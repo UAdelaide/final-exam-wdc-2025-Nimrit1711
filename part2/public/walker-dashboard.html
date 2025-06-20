@@ -65,7 +65,7 @@
             user.value = await res.json();
           } catch (error) {
             error.value = 'Could not load user';
-            
+            console.error(error);
           }
         }
 
