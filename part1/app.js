@@ -118,7 +118,15 @@ app.use('/users', usersRouter);
                 ('shub100', 'shub@example.com', 'hello3', 'walker');
         `);
 
-        
+        await db.query(`
+            INSERT INTO Users (username, email, password_hash, role)
+                VALUES
+                ('alice123','alice@example.com','hashed123','owner'),
+                ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+                ('carol123', 'carol@example.com', 'hashed789', 'owner'),
+                ('nimx2', 'nim@example.com', 'hashed111', 'owner'),
+                ('shub100', 'shub@example.com', 'hello3', 'walker');
+        `);
 
 
     });
