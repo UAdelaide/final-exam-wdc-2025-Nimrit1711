@@ -30,8 +30,8 @@ let db;
             database: 'DogWalkService'
         });
 
-        await db.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
-        await db.end();
+        await connection.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
+        await connection.end();
 
         // connect
         db = await mysql.createConnection({
