@@ -207,7 +207,8 @@ let db;
                         ROUND(AVG(r.rating), 1) AS average_rating,
                         COUNT(DISTINCT wr.request_id) AS completed_walks
                     FROM Users u
-                    LEFT JOIN WalkRatings r ON u.user_id
+                    LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
+                    LEFT JOIN WalkRatings wr ON r.request_id = wr
                     `);
                 res.json(summary);
             } catch (err) {
