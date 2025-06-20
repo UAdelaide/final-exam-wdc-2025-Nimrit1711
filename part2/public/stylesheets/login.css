@@ -27,3 +27,7 @@
 .login-form button:hover {
     background-color: rgb(12, 103, 240);
 }
+
+input:focus {
+
+}
