@@ -54,7 +54,10 @@
               headers: {
                 'Content-Type': 'application/json'
               },
-              body:
+              body: JSON.stringify({
+                username: this.username,
+                
+              })
             })
           }
         }
