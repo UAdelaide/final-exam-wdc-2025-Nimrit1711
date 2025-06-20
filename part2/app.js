@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const session = require('express-session'); // added session
-const userRoutes = require('./userRoutes')
+const userRoutes = require('./userRoutes'); // added routing
 
 const app = express();
 
