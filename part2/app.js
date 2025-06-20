@@ -27,11 +27,10 @@ function requireLogin(req, res, next) {
         res.redirect('/');
     }
 }
-
+// Now 
 app.get('/owner-dashboard.html', requireLogin, (req, res) => {
     res.sendFile('owner-dashboard.html');
-})
-
+});
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
