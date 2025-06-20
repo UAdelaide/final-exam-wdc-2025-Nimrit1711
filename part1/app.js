@@ -114,6 +114,7 @@ let db;
         `);
             // inserting data into tables
 
+        const [rows]
         await db.execute(`
             INSERT INTO Users (username, email, password_hash, role)
                 VALUES
