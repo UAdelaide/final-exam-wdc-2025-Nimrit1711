@@ -20,7 +20,11 @@ app.use(session({
 }));
 
 //middle ware for user authentication
-function requireLogin(req, res, next)
+function requireLogin(req, res, next) {
+    if (req.session && req.session.user) {
+        
+    }
+}
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
