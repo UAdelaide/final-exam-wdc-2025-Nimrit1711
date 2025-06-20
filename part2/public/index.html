@@ -59,7 +59,7 @@
                 password: this.password
               })
             });
-
+            // if login failed, create a error message
             if (res.redirected) {
               window.location.href = res.url;
             } else {
