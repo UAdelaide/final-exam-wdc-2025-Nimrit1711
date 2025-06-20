@@ -114,7 +114,7 @@ let db;
         `);
             // inserting data into tables
 
-        const [rows] = await db.execute('SELECT COUNT(')
+        const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
         await db.execute(`
             INSERT INTO Users (username, email, password_hash, role)
                 VALUES
