@@ -202,7 +202,7 @@ let db;
             try {
                 const [summary] = await db.execute(`
                     SELECT
-                        wr.request_id,
+                        u.username
                         d.name AS dog_name,
                         wr.requested_time,
                         wr.duration_minutes,
