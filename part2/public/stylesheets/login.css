@@ -19,4 +19,7 @@
     background-color: rgb(13, 110, 253);
     color: white;
     border: none;
+    border: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
