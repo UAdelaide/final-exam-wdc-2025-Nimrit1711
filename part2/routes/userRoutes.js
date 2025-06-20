@@ -82,7 +82,7 @@ router.get('/logout', (req, res) => {
 // get request for users dogs
 
 router.get('/mydogs', async (req, res) => {
-  if (!req)
+  if (!req.session.user || req.session.user.role !== )
 })
 
 
