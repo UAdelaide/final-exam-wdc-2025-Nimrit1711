@@ -23,7 +23,7 @@ let db;
 (async () => {
     try {
         // connect to mysql
-
+        const root = await mysql.createConnection({})
         await db.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
         await db.end();
 
