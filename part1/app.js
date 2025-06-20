@@ -28,21 +28,13 @@ app.use('/users', usersRouter);
         await root.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
         await root.end();
 
-        const db = await mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '',
-            database: 'DogWalkService'
-        });
-
-
         await db.query(`DROP TABLE IF EXISTS WalkRatings`);
         await db.query(`DROP TABLE IF EXISTS WalkApplications`);
         await db.query(`DROP TABLE IF EXISTS WalkRequests`);
         await db.query(`DROP TABLE IF EXISTS Dogs`);
         await db.query(`DROP TABLE IF EXISTS Users`);
 
-            //creating tables
+        //creating tables
         await db.query(`
             CREATE TABLE Users (
                 user_id INT AUTO_INCREMENT PRIMARY KEY,
