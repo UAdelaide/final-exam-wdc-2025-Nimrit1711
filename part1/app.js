@@ -203,7 +203,8 @@ let db;
                 const [summary] = await db.execute(`
                     SELECT
                         u.username AS walker_username,
-                        COUNT(r.rating_id)
+                        COUNT(r.rating_id) AS total_ratings,
+                        ROUND(AVG(r.rating))
                         d.name AS dog_name,
                         wr.requested_time,
                         wr.duration_minutes,
