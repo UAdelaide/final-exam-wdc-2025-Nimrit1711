@@ -61,8 +61,8 @@ body {
 
 button {
   position: absolute;
-  bottom: 5%;
-  left: 2%;
+  bottom: 15px;
+  right: 2%;
   background-color: transparent;
   border: none;
   color: #c4f0c5;
