@@ -43,5 +43,7 @@ body {
 button {
   position: absolute;
   bottom: 5%;
+  left: 2%;
+  background-color: transparent;
   
 }
