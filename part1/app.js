@@ -187,6 +187,7 @@ let db;
                         u.username AS owner_username
                     FROM WalkRequests wr
                     JOIN Users u ON d.owner_id = u.user_id
+                    WHERE wr.status = 'open'
                     `);
                 res.json(opens);
             } catch (err) {
