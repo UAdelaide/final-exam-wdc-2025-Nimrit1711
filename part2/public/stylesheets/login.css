@@ -32,6 +32,7 @@ input:focus {
     outline: none;
     border: 2px solid #3399FF;
     box-shadow: 0 0 4px #3399FF;
-    transition: ;
+    transition: 0.2s ease-in-out;
+    border-radius: 6px;
 
 }
