@@ -66,7 +66,9 @@
               const data = await res.json();
               this.errorMessage = data.error || 'Login Failed';
             }
-          } catch (error)
+          } catch (error) {
+            this.errorMessage = 'Server error, please try again';
+          }
         }
       }
     }).mount('#app');
