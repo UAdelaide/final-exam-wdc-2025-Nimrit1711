@@ -30,5 +30,6 @@
 
 input:focus {
     outline: none;
-    border: ;
+    border: 2px solid #3399FF;
+    box-shadow: 0 0 4px;
 }
