@@ -2,7 +2,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const db = require('./db');
 const mysql = require('mysql2/promise');
 
 var indexRouter = require('./routes/index');
@@ -20,7 +19,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
-
+let db;
 (async () => {
     try {
         // connect to mysql
