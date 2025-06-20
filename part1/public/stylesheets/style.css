@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 .white-bg {
@@ -17,7 +18,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 4rem;
+  padding: 60px;
 }
 
 
