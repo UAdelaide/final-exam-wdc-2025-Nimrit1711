@@ -56,6 +56,7 @@ router.post('/login', async (req, res) => {
         if (rows[0].role === 'walker') {
           return res.redirect('/walker-dashboard.html');
         }
+
       } else {
         res.send('<p>Login Failed <a href="/">Try again</a></p>');
     }
