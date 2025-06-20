@@ -127,7 +127,7 @@ let db;
             `);
         }
 
-    const [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
+    const [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
      if (dogRows[0].count ===0){
         await db.execute(`
                 INSERT INTO Dogs (owner_id, name, size)
@@ -140,7 +140,7 @@ let db;
             `);
     }
 
-    const [reqRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
+    const [reqRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
      if (reqRows[0].count ===0){
          await db.execute(`
             INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
@@ -151,6 +151,7 @@ let db;
             ((SELECT dog_id FROM Dogs WHERE name = 'Princess'), '2025-06-21 08:15:00', 20, 'Tea Tree Gully', 'open'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Cupcake'), '2025-06-21 09:15:00', 20, 'Riverlea', 'open');
         `);
+        }
              console.log('Database created and filled');
              await db.end();
          } catch (error) {
