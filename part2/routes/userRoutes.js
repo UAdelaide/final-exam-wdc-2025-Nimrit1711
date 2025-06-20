@@ -40,7 +40,7 @@ router.get('/me', (req, res) => {
     );
 
     if (rows.length === 0) {
-      return res.status(404).json
+      return res.status(404).json({ error: 'User not found'});
     }
   }
 
