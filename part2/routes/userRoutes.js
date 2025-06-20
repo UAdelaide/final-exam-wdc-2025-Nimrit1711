@@ -46,6 +46,9 @@ router.post('/login', async (req, res) => {
           id: rows[0].username,
           role: rows[0].role
         };
+
+        // redirect user base on their role
+        if (rows)
       }
 });
 
