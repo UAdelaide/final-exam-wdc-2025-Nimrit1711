@@ -38,6 +38,10 @@ router.get('/me', (req, res) => {
       'SELECT user_id, username, role FROM Users WHERE username = ?',
       [req.session.user.id]
     );
+
+    if (rows.length === 0) {
+      return res.status(404).json
+    }
   }
 
   res.json(req.session.user);
