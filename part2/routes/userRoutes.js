@@ -128,7 +128,8 @@ router.get('/dogs', aysnc (req, res) => {
     const [rows] = await db.execute('SELECT * FROM Dogs');
     res.json(rows);
   } catch (error) {
-    console.error('Error')
+    console.error('Error fetching registered dogs', error);
+    res.status(500)/json
   }
 })
 
