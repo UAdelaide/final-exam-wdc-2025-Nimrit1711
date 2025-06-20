@@ -46,5 +46,7 @@ button {
   left: 2%;
   background-color: transparent;
   border: none;
-  color: #c4f05;
+  color: #c4f0c5;
+  font-size: 12px;
+  cursor: crosshair;
 }
