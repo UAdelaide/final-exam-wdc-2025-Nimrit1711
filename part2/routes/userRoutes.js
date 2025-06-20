@@ -50,7 +50,8 @@ router.get('/me', (req, res) => {
       role: user.role
     });
   } catch (error) {
-    console.error
+    console.error('Error fetching user information', error);
+    res.status(500)
   }
 
   res.json(req.session.user);
