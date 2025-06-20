@@ -33,7 +33,7 @@ app.get('/owner-dashboard.html', requireLogin, (req, res) => {
 });
 
 app.get('/walker-dashboard.html', requireLogin, (req, res) => {
-    res.sendFile('owner-dashboard.html');
+    res.sendFile('walker-dashboard.html');
 });
 
 // Routes
