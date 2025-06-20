@@ -202,7 +202,8 @@ let db;
             try {
                 const [summary] = await db.execute(`
                     SELECT
-                        u.username
+                        u.username AS walker_username,
+                        COUNT(r.rating_id)
                         d.name AS dog_name,
                         wr.requested_time,
                         wr.duration_minutes,
