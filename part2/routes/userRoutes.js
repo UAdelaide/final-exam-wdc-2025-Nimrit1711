@@ -51,7 +51,7 @@ router.get('/me', (req, res) => {
     });
   } catch (error) {
     console.error('Error fetching user information', error);
-    res.status(500)
+    res.status(500).json({ error: 'Failed'})
   }
 
   res.json(req.session.user);
