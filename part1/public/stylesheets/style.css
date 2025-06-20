@@ -8,8 +8,8 @@ body {
   margin: 0;
 }
 
-a {
-  color: #00B7FF;
+.white-bg {
+  background-color: white;
 }
 
 .container {
