@@ -214,7 +214,7 @@ let db;
                     `);
                 res.json(summary);
             } catch (err) {
-                res.status(500).json({ error: 'Failed to fetch walk requests for status = open' });
+                res.status(500).json({ error: 'Failed to fetch Summary' });
             }
         });
 
