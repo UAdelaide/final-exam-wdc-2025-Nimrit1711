@@ -45,5 +45,6 @@ button {
   bottom: 5%;
   left: 2%;
   background-color: transparent;
-  
+  border: none;
+  color: #c4f05;
 }
