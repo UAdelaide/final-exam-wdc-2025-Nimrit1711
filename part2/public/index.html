@@ -21,7 +21,7 @@
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
   -->
     <!--Login form -->
-     <form class="login-form" method="POST" action="/api/login">
+     <form class="login-form" @submit.prevent>
         <label for = "username">Username</label>
         <input type="text" name="username" required>
         <br>
