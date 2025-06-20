@@ -34,7 +34,9 @@ router.get('/me', (req, res) => {
   }
 
   try {
-    const [rows] = await
+    const [rows] = await db.execute(
+      'SELECT user_id, username'
+    )
   }
 
   res.json(req.session.user);
