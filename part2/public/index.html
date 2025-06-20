@@ -94,9 +94,7 @@
             console.error(error);
           }
         },
-        setup() {
-        const dogs = ref([]);
-
+        
         async function loadRegisteredDogs() {
           try {
             const res = await fetch('/api/dogs');
