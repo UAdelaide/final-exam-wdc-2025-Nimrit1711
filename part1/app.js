@@ -29,8 +29,11 @@ app.use('/users', usersRouter);
         await root.end();
 
         const db = await mysql.createConnection({
-            
-        })
+            host: 'localhost',
+            user: 'root',
+            password: '',
+            database: 'DogWalkService'
+        });
         }
 })
 
