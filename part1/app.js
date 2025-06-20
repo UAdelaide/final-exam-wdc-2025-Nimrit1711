@@ -42,6 +42,7 @@ app.use('/users', usersRouter);
         await db.query(`DROP TABLE IF EXISTS Dogs`);
         await db.query(`DROP TABLE IF EXISTS Users`);
 
+            //creating tables
         await db.query(`
             CREATE TABLE Users (
                 user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -105,7 +106,7 @@ app.use('/users', usersRouter);
                 CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
             )
         `);
-
+            //
 
 });
 
