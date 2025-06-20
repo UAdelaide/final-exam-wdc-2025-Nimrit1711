@@ -151,8 +151,8 @@ let db;
             ((SELECT dog_id FROM Dogs WHERE name = 'Princess'), '2025-06-21 08:15:00', 20, 'Tea Tree Gully', 'open'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Cupcake'), '2025-06-21 09:15:00', 20, 'Riverlea', 'open');
         `);
-        }
-             console.log('Database created and filled');
+    }
+        console.log('Database created and filled');
              await db.end();
          } catch (error) {
             console.error('error loading database: ', error);
