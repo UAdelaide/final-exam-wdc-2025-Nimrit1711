@@ -74,7 +74,8 @@ router.get('/logout', (req, res) => {
       console.error('Logout failed: ', err);
       return res.status(500).send('Could not log out');
     }
-    res.clearCookie('connect.sid');
+    res.clearCookie('connect.sid'); // clear the session cookie
+    res.redirect('/')
   })
 })
 
