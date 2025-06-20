@@ -153,8 +153,7 @@ let db;
         `);
     }
         console.log('Database created and filled');
-             await db.end();
-         } catch (error) {
+} catch (error) {
             console.error('error loading database: ', error);
          }
         })();
