@@ -69,7 +69,7 @@ router.post('/login', async (req, res) => {
 
 // logout route
 router.get('/logout', (req, res) => {
-  
+  req.session.destroy((err) => )
 })
 
 module.exports = router;
