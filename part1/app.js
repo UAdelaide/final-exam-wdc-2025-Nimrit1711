@@ -35,12 +35,12 @@ app.use('/users', usersRouter);
             database: 'DogWalkService'
         });
 
-          // Drop tables (reverse order of dependencies)
-    await db.query(`DROP TABLE IF EXISTS WalkRatings`);
-    await db.query(`DROP TABLE IF EXISTS WalkApplications`);
-    await db.query(`DROP TABLE IF EXISTS WalkRequests`);
-    await db.query(`DROP TABLE IF EXISTS Dogs`);
-    await db.query(`DROP TABLE IF EXISTS Users`);
+
+        await db.query(`DROP TABLE IF EXISTS WalkRatings`);
+        await db.query(`DROP TABLE IF EXISTS WalkApplications`);
+        await db.query(`DROP TABLE IF EXISTS WalkRequests`);
+        await db.query(`DROP TABLE IF EXISTS Dogs`);
+        await db.query(`DROP TABLE IF EXISTS Users`);
 })
 
 module.exports = app;
