@@ -26,7 +26,9 @@ app.use('/users', usersRouter);
         const root = await mysql.createConnection({ host: 'localhost', user: 'root', password: '' });
 
         await root.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
-        await root
+        await root.end();
+
+        const db = await mysql.createConnection({})
         }
 })
 
