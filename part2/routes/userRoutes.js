@@ -123,7 +123,7 @@ router.get('/mydogs', async (req, res) => {
 });
 
 // routes for registered dogs in homepage
-router.get('/dogs', aysnc (req, res) => {
+router.get('/dogs', async (req, res) => {
   try {
     const [rows] = await db.execute('SELECT * FROM Dogs');
     res.json(rows);
