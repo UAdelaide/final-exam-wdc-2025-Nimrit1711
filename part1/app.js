@@ -209,7 +209,8 @@ let db;
                     FROM Users u
                     LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
                     LEFT JOIN WalkRatings wr ON r.request_id = wr.request_id AND wr.status = 'completed'
-                    WHERE
+                    WHERE u.role = 'walker'
+                    GROUP BY u.user_id
                     `);
                 res.json(summary);
             } catch (err) {
