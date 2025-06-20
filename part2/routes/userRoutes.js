@@ -42,6 +42,11 @@ router.get('/me', (req, res) => {
     if (rows.length === 0) {
       return res.status(404).json({ error: 'User not found'});
     }
+
+    const user = rows[0];
+    res.json({
+      
+    })
   }
 
   res.json(req.session.user);
