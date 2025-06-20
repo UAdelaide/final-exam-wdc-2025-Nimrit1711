@@ -33,6 +33,8 @@ let db;
         await db.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
         await db.end();
 
+        // connect
+        
         await db.query(`DROP TABLE IF EXISTS WalkRatings`);
         await db.query(`DROP TABLE IF EXISTS WalkApplications`);
         await db.query(`DROP TABLE IF EXISTS WalkRequests`);
