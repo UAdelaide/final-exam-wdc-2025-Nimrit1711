@@ -34,7 +34,7 @@ let db;
         await db.end();
 
         // connect
-        
+        db = await mysql.createConnection({})
         await db.query(`DROP TABLE IF EXISTS WalkRatings`);
         await db.query(`DROP TABLE IF EXISTS WalkApplications`);
         await db.query(`DROP TABLE IF EXISTS WalkRequests`);
