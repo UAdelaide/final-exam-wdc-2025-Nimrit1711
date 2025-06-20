@@ -24,9 +24,10 @@ function requireLogin(req, res, next) {
     if (req.session && req.session.user) {
         next();
     } else {
-        res.redirect
+        res.redirect('/');
     }
 }
+
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
