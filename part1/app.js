@@ -22,7 +22,7 @@ app.use('/users', usersRouter);
 
 (async () => {
     try {
-        await db.query(``)
+        
     }
 })
 
