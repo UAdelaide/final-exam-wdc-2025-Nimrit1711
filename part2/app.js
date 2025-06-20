@@ -19,6 +19,7 @@ app.use(session({
 
 }));
 
+//middle ware for user au
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
