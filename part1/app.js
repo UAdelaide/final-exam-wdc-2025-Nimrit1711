@@ -119,13 +119,13 @@ app.use('/users', usersRouter);
         `);
 
         await db.query(`
-            INSERT INTO Users (username, email, password_hash, role)
+            INSERT INTO Dogs (owner_id, name, size)
                 VALUES
-                ('alice123','alice@example.com','hashed123','owner'),
-                ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
-                ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-                ('nimx2', 'nim@example.com', 'hashed111', 'owner'),
-                ('shub100', 'shub@example.com', 'hello3', 'walker');
+                ((SELECT user_id FROM Users WHERE username='alice123'), 'Max', 'medium'),
+    -> ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small'),
+    -> ((SELECT user_id FROM Users WHERE username='nimx2'), 'Oreo', 'small'),
+    -> ((SELECT user_id FROM Users WHERE username='nimx2'), 'Princess', 'large'),
+    -> ((SELECT user_id FROM Users WHERE username='nimx2'), 'Cupcake', 'large');
         `);
 
 
