@@ -10,7 +10,9 @@ body {
 }
 .outer-wrapper {
   background-color: white;
-  mar
+  margin: 50px auto;
+  max-width: 900px;
+  box-shadow: ;
 }
 .white-bg {
   background-color: white;
