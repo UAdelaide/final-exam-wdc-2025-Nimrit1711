@@ -74,7 +74,8 @@
         async function loadRegisteredDogs() {
           try {
             const res = await fetch('/api/dogs');
-            if (!res.ok) throw new Error('Failed to fetch regisi')
+            if (!res.ok) throw new Error('Failed to fetch regisited dogs');
+            const data = await res.json();
           }
         }
       }
