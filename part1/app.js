@@ -160,9 +160,9 @@ let db;
         // Route to /api/dogs
     app.get('/api/dogs', async (req, res) => {
         try {
-            const [dogs] = await db.execute('
+            const [dogs] = await db.execute(`
                 SELECT
-                    d
+                    d.name AS dog_name
                 ');
             res.json(dogs);
         } catch (err) {
