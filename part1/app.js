@@ -191,7 +191,7 @@ let db;
                     `);
                 res.json(opens);
             } catch (err) {
-                res.status(500).json({ error: 'Failed to fetch dogs' });
+                res.status(500).json({ error: 'Failed to fetch walk requests for status = open' });
             }
         });
 
