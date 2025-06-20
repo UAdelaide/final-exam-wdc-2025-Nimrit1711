@@ -47,7 +47,10 @@ router.get('/me', (req, res) => {
     res.json({
       id: user.user_id,
       username: user.username,
-    })
+      role: user.role
+    });
+  } catch (error) {
+    console.error
   }
 
   res.json(req.session.user);
