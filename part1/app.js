@@ -207,9 +207,7 @@ let db;
                         ROUND(AVG(r.rating), 1) AS average_rating,
                         COUNT(DISTINCT wr.request_id) AS completed_walks
                     FROM Users u
-                    LEFT Dogs d ON wr.dog_id = d.dog_id
-                    JOIN Users u ON d.owner_id = u.user_id
-                    WHERE wr.status = 'open'
+                    LEFT JOIN WalkRatings r ON u.user_id
                     `);
                 res.json(summary);
             } catch (err) {
