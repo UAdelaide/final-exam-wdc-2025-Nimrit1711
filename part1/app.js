@@ -109,20 +109,14 @@ app.use('/users', usersRouter);
             //inserting data into tables
 
         await db.query(`
-            CREATE TABLE WalkRatings (
-                rating_id INT AUTO_INCREMENT PRIMARY KEY,
-                request_id INT NOT NULL,
-                walker_id INT NOT NULL,
-                owner_id INT NOT NULL,
-                rating INT CHECK (rating BETWEEN 1 AND 5),
-                comments TEXT,
-                rated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (request_id) REFERENCES WalkRequests(request_id),
-                FOREIGN KEY (walker_id) REFERENCES Users(user_id),
-                FOREIGN KEY (owner_id) REFERENCES Users(user_id),
-                CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
-            )
-        `);
-});
+            INSERT INTO Users (username, email, password_hash, role)
+                VALUES
+                -> ('alice123','alice@example.com','hashed123','owner'),
+                 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+                -> ('carol123', 'carol@example.com', 'hashed789', 'owner'),
+                -> ('nimx2', 'nim@example.com', 'hashed111', 'owner'),
+                -> ('shub100', 'shub@example.com', 'hello3', 'walker');
+                    `);
+            });
 
 module.exports = app;
