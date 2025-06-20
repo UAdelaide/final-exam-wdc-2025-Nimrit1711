@@ -18,8 +18,7 @@ body {
 
 .white-bg {
   background-color: white;
-  padding: 20px;
-  width: 300px;
+
   font-size: 10px;
   box-shadow: 0 0 18px lime;
 }
