@@ -153,10 +153,10 @@ let db;
         `);
     }
         console.log('Database created and filled');
-} catch (error) {
-            console.error('error loading database: ', error);
-         }
-        })();
+    } catch (error) {
+        console.error('error loading database: ', error);
+    }
+})();
 
         // Route to /api/dogs
         app.get('/api/dogs', async (req, res) => {
