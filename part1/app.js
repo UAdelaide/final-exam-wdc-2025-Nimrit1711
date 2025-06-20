@@ -208,7 +208,8 @@ let db;
                         COUNT(DISTINCT wr.request_id) AS completed_walks
                     FROM Users u
                     LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
-                    LEFT JOIN WalkRatings wr ON r.request_id = wr
+                    LEFT JOIN WalkRatings wr ON r.request_id = wr.request_id AND wr.status = 'completed'
+                    WHERE
                     `);
                 res.json(summary);
             } catch (err) {
