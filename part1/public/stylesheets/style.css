@@ -31,5 +31,6 @@ body {
 
 .title {
   font-size: 30px;
-  color: ;
+  color: darkmagenta;
+  text-shadow: 1px 1px 3px yellow;
 }
