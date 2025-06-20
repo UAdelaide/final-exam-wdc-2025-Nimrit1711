@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
           if (rows[0].role === 'walker') {
             return res.redirect('/walker-dashboard.html');
           }
-          // if invalid password or username
+          // if invalid password or username send error message
         } else {
           return res.status(401).json({ error: 'Invalid username or password'});
       }
