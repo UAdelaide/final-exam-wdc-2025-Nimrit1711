@@ -23,10 +23,9 @@ app.use('/users', usersRouter);
 (async () => {
     try {
         // connect to mysql
-        const root = await mysql.createConnection({ host: 'localhost', user: 'root', password: '' });
 
-        await root.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
-        await root.end();
+        await db.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
+        await db.end();
 
         await db.query(`DROP TABLE IF EXISTS WalkRatings`);
         await db.query(`DROP TABLE IF EXISTS WalkApplications`);
@@ -99,7 +98,7 @@ app.use('/users', usersRouter);
                 CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
             )
         `);
-            //inserting data into tables
+            // inserting data into tables
 
         await db.query(`
             INSERT INTO Users (username, email, password_hash, role)
