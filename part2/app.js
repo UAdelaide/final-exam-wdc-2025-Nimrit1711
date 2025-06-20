@@ -27,6 +27,8 @@ function requireLogin(req, res, next) {
         res.redirect('/');
     }
 }
+
+// to ensure only 
 // Now user needs to login in order to access these pages
 app.get('/owner-dashboard.html', requireLogin, (req, res) => {
     res.sendFile('owner-dashboard.html');
