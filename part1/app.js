@@ -25,7 +25,9 @@ let db;
         // connect to mysql
         const root = await mysql.createConnection({
             host: 'localhost',
-            user: 'root'
+            user: 'root',
+            password: '',
+            database: ''
         })
         await db.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
         await db.end();
