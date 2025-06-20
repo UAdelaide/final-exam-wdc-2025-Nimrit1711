@@ -72,7 +72,7 @@ router.get('/logout', (req, res) => {
   req.session.destroy((err) => {
     if (err) {
       console.error('Logout failed: ', err);
-      return
+      return res.status(500).send('Could not log out');
     }
   })
 })
