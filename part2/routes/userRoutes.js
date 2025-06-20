@@ -89,7 +89,9 @@ router.get('/mydogs', async (req, res) => {
   const userId = req.session.user.id;
 
   try {
-    const [dogs] = await db.execute()
+    const [dogs] = await db.execute(
+      'SELECT dog_id, name, size'
+    )
   }
 })
 
