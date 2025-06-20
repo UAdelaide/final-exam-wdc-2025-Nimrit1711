@@ -97,7 +97,11 @@
         onMounted(() => {
           loadRegisteredDogs();
         });
+        return {
+          dogs
+        }
       }
+
       methods: {
         async login() {
           try {
