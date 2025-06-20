@@ -179,7 +179,8 @@ let db;
             try {
                 const [opens] = await db.execute(`
                     SELECT
-                        wr.request AS dog_name,
+                        wr.request,
+                        d.name AS dog_name,
                         d.size,
                         u.username AS owner_username
                     FROM Dogs d
