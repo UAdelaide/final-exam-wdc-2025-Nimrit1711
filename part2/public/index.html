@@ -64,9 +64,9 @@
               window.location.href = res.url;
             } else {
               const data = await res.json();
-              this.errorMessage = data.error
+              this.errorMessage = data.error || 'Login Failed';
             }
-          }
+          } catch (error)
         }
       }
     }).mount('#app');
