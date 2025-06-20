@@ -8,14 +8,16 @@
 
 <body>
    <div id="app" class="container">
+       <div class="image-div">
+        <img :src="dogImage" class="no-alt" data-src="Dog of the day image" />
+        <p>Name: </p>
+    </div>
     <div class="white-bg">
         <h1 class="title">Dog Of The Day!</h1>
         <button type="button" @click="fetchDog">Dog</button>
     </div>
-    <div class="image-div">
-        <img :src="dogImage" class="no-alt" data-src="Dog of the day image" />
-        <p>Name: </p>
-    </div>
+
+
    </div>
 
    <script>
