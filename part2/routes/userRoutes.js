@@ -58,7 +58,7 @@ router.post('/login', async (req, res) => {
           }
 
         } else {
-          res.send('<p>Login Failed <a href="/">Try again</a></p>');
+          return res.status(401)
       }
     } catch (error) {
       console.error(error);
