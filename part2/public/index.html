@@ -68,7 +68,6 @@
           errorMessage: ''
         };
       },
-
       methods: {
         async login() {
           try {
@@ -94,7 +93,6 @@
             console.error(error);
           }
         },
-
         async function loadRegisteredDogs() {
           try {
             const res = await fetch('/api/dogs');
