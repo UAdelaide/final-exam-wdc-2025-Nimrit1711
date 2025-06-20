@@ -22,7 +22,7 @@ app.use('/users', usersRouter);
 
 (async () => {
     try {
-        //connect to mysql
+        // connect to mysql
         const root = await mysql.createConnection({ host: 'localhost', user: 'root', password: '' });
 
         await root.query(`CREATE DATABASE IF NOT EXISTS DogWalkService`);
@@ -34,7 +34,8 @@ app.use('/users', usersRouter);
         await db.query(`DROP TABLE IF EXISTS Dogs`);
         await db.query(`DROP TABLE IF EXISTS Users`);
 
-        //creating tables
+        // creating tables
+
         await db.query(`
             CREATE TABLE Users (
                 user_id INT AUTO_INCREMENT PRIMARY KEY,
