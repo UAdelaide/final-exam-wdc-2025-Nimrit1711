@@ -58,70 +58,74 @@
 
 
   <script>
-    const { createApp } = Vue;
-    createApp({
-      data() {
-        return {
-          message: 'Welcome to the Dog Walking Service!',
-          username: '',
-          password: '',
-          errorMessage: '',
-          dogs: []
-        };
-      },
-      methods: {
-        async login() {
-          try {
-            const res = await fetch('/api/login', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                username: this.username,
-                password: this.password
-              })
-            });
-            // if login failed, create a error message
-            if (res.redirected) {
-              window.location.href = res.url;
-            } else {
-              const data = await res.json();
-              this.errorMessage = data.error || 'Login Failed';
-            }
-          } catch (error) {
-            this.errorMessage = 'Server error, please try again';
-            console.error(error);
-          }
-        },
-        async loadRegisteredDogs() {
-          try {
-            const res = await fetch('/api/dogs');
-            if (!res.ok) throw new Error('Failed to fetch regisited dogs');
-            const data = await res.json();
+      const { createApp } = Vue;
 
-            // adding a photo
-            const dogPhoto = await Promise.all(
-              data.map(async dog => {
-                try {
-                  const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
-                  const imgData = await imgRes.json();
-                  return { ...dog, photo: imgData.message };
-                } catch (error) {
-                  return { ...dog, photo: '' };
-                }
-              })
-            );
-            this.dogs = dogPhoto;
-          } catch (error) {
-            console.error('Error loading dog list', error);
+  createApp({
+    data() {
+      return {
+        message: 'Welcome to the Dog Walking Service!',
+        username: '',
+        password: '',
+        errorMessage: '',
+        dogs: []
+      };
+    },
+    methods: {
+      async login() {
+        try {
+          const res = await fetch('/api/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              username: this.username,
+              password: this.password
+            })
+          });
+
+          if (res.redirected) {
+            window.location.href = res.url;
+          } else {
+            const data = await res.json();
+            this.errorMessage = data.error || 'Login Failed';
           }
+        } catch (error) {
+          this.errorMessage = 'Server error, please try again';
+          console.error(error);
         }
       },
-      mounted() {
-          this.loadRegisteredDogs();
+
+      async loadRegisteredDogs() {
+        try {
+          const res = await fetch('/api/dogs');
+          if (!res.ok) throw new Error('Failed to fetch registered dogs');
+          const data = await res.json();
+
+          const dogPhoto = await Promise.all(
+            data.map(async dog => {
+              try {
+                const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
+                const imgData = await imgRes.json();
+                return { ...dog, photo: imgData.message };
+              } catch (error) {
+                return { ...dog, photo: '' };
+              }
+            })
+          );
+
+          this.dogs = dogPhoto;
+        } catch (error) {
+          console.error('Error loading dog list', error);
         }
-    }).mount('#app');
+      }
+    },
+
+    mounted() { 
+      this.loadRegisteredDogs();
+    }
+
+  }).mount('#app');
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
