@@ -25,4 +25,6 @@
     transition: background-color 0.3s ease;
 }
 
-.login-form
+.login-form button:hover {
+    background-color: #407070;
+}
