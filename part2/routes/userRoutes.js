@@ -122,7 +122,8 @@ router.get('/mydogs', async (req, res) => {
   }
 });
 
-// routes for 
+// routes for registered dogs in homepage
+router.get('/')
 
 
 module.exports = router;
