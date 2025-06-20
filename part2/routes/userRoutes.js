@@ -58,11 +58,11 @@ router.post('/login', async (req, res) => {
           }
 
         } else {
-          return res.status(401).json({error: 'Invalid username or password'})
+          return res.status(401).json({error: 'Invalid username or password'});
       }
     } catch (error) {
       console.error(error);
-      res.status(500).send('Login Server error');
+      res.status(500).send('Internal Server error');
     }
 });
 
