@@ -162,7 +162,9 @@ let db;
         try {
             const [dogs] = await db.execute(`
                 SELECT
-                    d.name AS dog_name
+                    d.name AS dog_name,
+                    d.size,
+                    u.username AS owner_username
                 ');
             res.json(dogs);
         } catch (err) {
