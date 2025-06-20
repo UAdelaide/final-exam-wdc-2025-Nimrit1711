@@ -28,6 +28,8 @@ function requireLogin(req, res, next) {
     }
 }
 
+app.get('')
+
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
