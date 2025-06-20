@@ -135,9 +135,9 @@ app.use('/users', usersRouter);
             ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Oreo'), '2025-06-20 11:30:00', 60, 'Henley', 'accepted'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Princess'), '2025-06-21 08:15:00', 20, 'Tea Tree Gully', 'open'),
-    -> ((SELECT dog_id FROM Dogs WHERE name = 'Cupcake'), '2025-06-21 09:15:00', 20, 'Riverlea', 'open');
+            ((SELECT dog_id FROM Dogs WHERE name = 'Cupcake'), '2025-06-21 09:15:00', 20, 'Riverlea', 'open');
         `);
-
+             console.log('Database created and seeded!');
 
     });
 
