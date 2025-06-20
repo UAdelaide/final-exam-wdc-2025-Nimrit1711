@@ -19,7 +19,8 @@ app.use(session({
 
 }));
 
-// middle ware for user authentication - IM NOT sure if this is really required if 
+// middle ware for user authentication - IM NOT sure if this is really required in this exam. if not pls ignore ;)
+
 function requireLogin(req, res, next) {
     if (req.session && req.session.user) {
         next();
