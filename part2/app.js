@@ -19,7 +19,7 @@ app.use(session({
 
 }));
 
-// middle ware for user authentication
+// middle ware for user authentication - IM NOT sure if this is really required if 
 function requireLogin(req, res, next) {
     if (req.session && req.session.user) {
         next();
