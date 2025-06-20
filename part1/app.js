@@ -70,7 +70,7 @@ let db;
             )
         `);
 
-        await db.query(`
+        await db.execute(`
             CREATE TABLE WalkRequests (
                 request_id INT AUTO_INCREMENT PRIMARY KEY,
                 dog_id INT NOT NULL,
@@ -84,7 +84,7 @@ let db;
         `);
 
 
-        await db.query(`
+        await db.execute(`
             CREATE TABLE WalkApplications (
                 application_id INT AUTO_INCREMENT PRIMARY KEY,
                 request_id INT NOT NULL,
@@ -97,7 +97,7 @@ let db;
             )
         `);
 
-        await db.query(`
+        await db.execute(`
             CREATE TABLE WalkRatings (
                 rating_id INT AUTO_INCREMENT PRIMARY KEY,
                 request_id INT NOT NULL,
