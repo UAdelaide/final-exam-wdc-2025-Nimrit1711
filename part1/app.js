@@ -142,7 +142,6 @@ app.use('/users', usersRouter);
          } catch (error) {
             console.error('error loading database: ', error);
          }
-
-    });
+        })();
 
 module.exports = app;
