@@ -42,7 +42,9 @@ router.post('/login', async (req, res) => {
   try {
     const [rows] = await db.execute(`SELECT * FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);
       if (rows.length === 1) {
-        
+        req.session.user - {
+          id: rows[0]
+        }
       }
 });
 
