@@ -128,7 +128,15 @@ app.use('/users', usersRouter);
                 ((SELECT user_id FROM Users WHERE username='nimx2'), 'Cupcake', 'large');
         `);
 
-        
+         await db.query(`
+            INSERT INTO Dogs (owner_id, name, size)
+                VALUES
+                ((SELECT user_id FROM Users WHERE username='alice123'), 'Max', 'medium'),
+                ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small'),
+                ((SELECT user_id FROM Users WHERE username='nimx2'), 'Oreo', 'small'),
+                ((SELECT user_id FROM Users WHERE username='nimx2'), 'Princess', 'large'),
+                ((SELECT user_id FROM Users WHERE username='nimx2'), 'Cupcake', 'large');
+        `);
 
 
     });
