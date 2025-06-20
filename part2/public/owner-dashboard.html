@@ -131,7 +131,8 @@
           .then(res => res.json())
           .then(data => dogs.value = data)
           .catch(err => {
-            error.value = 'F'
+            error.value = 'Failed to load dogs';
+            console.error(err);
           }
         });
 
