@@ -28,7 +28,7 @@ function requireLogin(req, res, next) {
     }
 }
 
-app.get('')
+app.get('/owner-dashboard.html', requireLogin, (res.))
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
