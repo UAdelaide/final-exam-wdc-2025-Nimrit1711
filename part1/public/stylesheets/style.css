@@ -8,7 +8,10 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.outer-wrapper {
+  background-color: white;
+  mar
+}
 .white-bg {
   background-color: white;
   padding: 20px;
