@@ -34,7 +34,13 @@ let db;
         await db.end();
 
         // connect
-        db = await mysql.createConnection({})
+        db = await mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '',
+            database: 'DogWalkService'
+        });
+        })
         await db.query(`DROP TABLE IF EXISTS WalkRatings`);
         await db.query(`DROP TABLE IF EXISTS WalkApplications`);
         await db.query(`DROP TABLE IF EXISTS WalkRequests`);
