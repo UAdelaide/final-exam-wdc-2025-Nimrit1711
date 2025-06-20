@@ -33,9 +33,10 @@ body {
   padding: 60px;
 }
 
-
-.image-div img {
+.image-div {
   position: relative;
+}
+.image-div img {
   border: 5px dashed red;
 }
 
