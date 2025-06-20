@@ -156,4 +156,6 @@ section {
 }
 
 
-table tbody
+table tbody tr:nth-child(even) {
+    
+}
