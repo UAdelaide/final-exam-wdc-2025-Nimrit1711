@@ -60,8 +60,10 @@ app.use('/users', usersRouter);
                 name VARCHAR(50) NOT NULL,
                 size ENUM('small', 'medium', 'large') NOT NULL,
                 FOREIGN KEY (owner_id) REFERENCES Users(user_id)
-);
+            )
         `);
+
+        
 
 
 
