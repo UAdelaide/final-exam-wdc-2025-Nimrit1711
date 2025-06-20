@@ -129,7 +129,8 @@
           loadWalks();
           fetch('/api/users/mydogs')
           .then(res => res.json())
-          .then(data =>)
+          .then(data => dogs.value = data)
+          .catch(err -=
         });
 
         return {
