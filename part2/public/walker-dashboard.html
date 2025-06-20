@@ -76,7 +76,7 @@
               await getCurrentUser();  // if user is missing
             }
 
-            if (!user.value || !user.value.user_id) {
+            if (!user.value || !user.value.id) {
               throw new Error('User Id is not available');
             }
 
