@@ -85,10 +85,10 @@
                   const imgData = await imgRes.json();
                   return { ...dog, photo: imgData.message };
                 } catch (error) {
-                  return ( ...dog, photo: '' };)
+                  return { ...dog, photo: '' };
                 }
               })
-            )
+            );
           }
         }
       }
