@@ -40,7 +40,7 @@ let db;
             password: '',
             database: 'DogWalkService'
         });
-        })
+
         await db.query(`DROP TABLE IF EXISTS WalkRatings`);
         await db.query(`DROP TABLE IF EXISTS WalkApplications`);
         await db.query(`DROP TABLE IF EXISTS WalkRequests`);
