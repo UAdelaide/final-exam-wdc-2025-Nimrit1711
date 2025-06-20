@@ -19,7 +19,7 @@ app.use(session({
 
 }));
 
-//middle ware for user authentication
+// middle ware for user authentication
 function requireLogin(req, res, next) {
     if (req.session && req.session.user) {
         next();
@@ -27,8 +27,12 @@ function requireLogin(req, res, next) {
         res.redirect('/');
     }
 }
-// Now 
+// Now user needs to login in order to access these pages
 app.get('/owner-dashboard.html', requireLogin, (req, res) => {
+    res.sendFile('owner-dashboard.html');
+});
+
+app.get('/walker-dashboard.html', requireLogin, (req, res) => {
     res.sendFile('owner-dashboard.html');
 });
 
