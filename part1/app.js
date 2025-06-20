@@ -204,7 +204,7 @@ let db;
                     SELECT
                         u.username AS walker_username,
                         COUNT(r.rating_id) AS total_ratings,
-                        ROUND(AVG(r.rating))
+                        ROUND(AVG(r.rating), 1) AS average_rating
                         d.name AS dog_name,
                         wr.requested_time,
                         wr.duration_minutes,
