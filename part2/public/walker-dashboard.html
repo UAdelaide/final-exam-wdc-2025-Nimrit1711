@@ -76,7 +76,9 @@
               await getCurrentUser();  // if user is missing
             }
 
-            if (!user.value)
+            if (!user.value || !user.value.user_id) {
+              throw new Error
+            }
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
