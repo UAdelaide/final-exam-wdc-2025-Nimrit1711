@@ -38,6 +38,7 @@ body {
   position: relative;
 }
 .image-div img {
+  width: 400px;
   border: 5px dashed red;
 }
 
