@@ -8,7 +8,9 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(express)
+app.use(express.urlencoded({ extended: true }));
+
+// 
 app.use(session({
     secret: 'secret-key',
     resave: false,
