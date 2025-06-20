@@ -56,7 +56,9 @@ router.post('/login', async (req, res) => {
       } else {
         res.send('<p>Login Failed <a href="/">Try again</a></p>');
       }
-      }
+    } catch (error) {
+      console.error(error);
+    }
 });
 
 module.exports = router;
