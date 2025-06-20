@@ -79,7 +79,9 @@ router.get('/logout', (req, res) => {
   });
 });
 
-// 
+// get request for users dogs
+
+router.get('/mydogs')
 
 
 module.exports = router;
