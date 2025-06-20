@@ -31,7 +31,7 @@ function requireLogin(req, res, next) {
 // to ensure only users can access their required role dashboard
 function requireRole(role) {
     return function (req, res, next) {
-        if (req.session && req.session.user) {
+        if (req.session && req.session.user && req.session.user.role === role) {
             next();
         } else {
             res.redirect('/');
