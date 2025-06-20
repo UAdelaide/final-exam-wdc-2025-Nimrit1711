@@ -68,7 +68,7 @@
           errorMessage: ''
         };
       },
-      
+
       methods: {
         async login() {
           try {
@@ -93,7 +93,41 @@
             this.errorMessage = 'Server error, please try again';
             console.error(error);
           }
+        },
+        setup() {
+        const dogs = ref([]);
+
+        async function loadRegisteredDogs() {
+          try {
+            const res = await fetch('/api/dogs');
+            if (!res.ok) throw new Error('Failed to fetch regisited dogs');
+            const data = await res.json();
+
+            // adding a photo
+            const dogPhoto = await Promise.all(
+              data.map(async dog => {
+                try {
+                  const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
+                  const imgData = await imgRes.json();
+                  return { ...dog, photo: imgData.message };
+                } catch (error) {
+                  return { ...dog, photo: '' };
+                }
+              })
+            );
+            dogs.value = dogPhoto;
+          } catch (error) {
+            console.error('Error loading dog list', error);
+          }
         }
+        onMounted(() => {
+          loadRegisteredDogs();
+        });
+        return {
+          dogs
+        };
+      },
+
       }
     }).mount('#app');
   </script>
