@@ -45,7 +45,8 @@ router.get('/me', (req, res) => {
 
     const user = rows[0];
     res.json({
-      
+      id: user.user_id,
+      username: user.username,
     })
   }
 
