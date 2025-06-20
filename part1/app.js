@@ -183,9 +183,9 @@ let db;
                         d.name AS dog_name,
                         wr.requested_time,
                         wr.duration_minutes,
-                        wr
+                        wr.location,
                         u.username AS owner_username
-                    FROM Dogs d
+                    FROM WalkRequests wr
                     JOIN Users u ON d.owner_id = u.user_id
                     `);
                 res.json(opens);
