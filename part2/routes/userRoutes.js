@@ -82,7 +82,9 @@ router.get('/logout', (req, res) => {
 // get request for users dogs
 
 router.get('/mydogs', async (req, res) => {
-  if (!req.session.user || req.session.user.role !== )
+  if (!req.session.user || req.session.user.role !== 'owner'){
+    return res.status(401).json({ error: })
+  }
 })
 
 
