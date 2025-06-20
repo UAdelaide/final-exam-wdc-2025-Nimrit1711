@@ -174,7 +174,7 @@ let db;
         }
         });
 
-        // Route to /api/dogs
+        // Route to /api/walkrequests/open
         app.get('/api/dogs', async (req, res) => {
             try {
                 const [dogs] = await db.execute(`
