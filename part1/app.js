@@ -181,7 +181,9 @@ let db;
                     SELECT
                         wr.request,
                         d.name AS dog_name,
-                        d.size,
+                        wr.requested_time,
+                        wr.duration_minutes,
+                        wr
                         u.username AS owner_username
                     FROM Dogs d
                     JOIN Users u ON d.owner_id = u.user_id
