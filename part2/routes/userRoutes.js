@@ -35,7 +35,7 @@ router.get('/me', (req, res) => {
 
   try {
     const [rows] = await db.execute(
-      'SELECT user_id, username'
+      'SELECT user_id, username, role FROM Users WHERE username = ?',
     )
   }
 
