@@ -41,7 +41,7 @@ function requireRole(role) {
 
 // Now user needs to login in order to access these pages
 app.get('/owner-dashboard.html', requireLogin, requireRole('owner'), (req, res) => {
-    res.sendFile(path.join('owner-dashboard.html');
+    res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
 
 app.get('/walker-dashboard.html', requireLogin, requireRole('walker'), (req, res) => {
