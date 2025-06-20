@@ -40,7 +40,7 @@ function requireRole(role) {
 }
 
 // Now user needs to login in order to access these pages
-app.get('/owner-dashboard.html', requireLogin, (req, res) => {
+app.get('/owner-dashboard.html', requireLogin, requireRole('owner'), (req, res) => {
     res.sendFile('owner-dashboard.html');
 });
 
